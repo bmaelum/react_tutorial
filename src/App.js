@@ -20,6 +20,7 @@ class App extends React.Component {
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.toggleTodo = this.toggleTodo.bind(this)
 
   }
 
@@ -43,6 +44,17 @@ class App extends React.Component {
     })
   }
 
+  toggleTodo(index) {
+    let items = this.state.items.slice()
+
+    let item = items[index]
+    item.done = !item.done 
+
+    this.setState({
+      items: items
+    })
+  }
+
   render() {
     return (
       <div className="App">
@@ -54,8 +66,8 @@ class App extends React.Component {
         </form>
     
       <ol>
-        {this.state.items.map((item) => (
-          <Item key={item.id} done={item.done} text={item.text} />
+        {this.state.items.map((item, index) => (
+          <Item key={index} clickHandler={() => this.toggleTodo(index) } done={item.done} text={item.text} />
       ))}
       </ol>
       </div>
