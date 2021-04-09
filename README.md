@@ -1,3 +1,10 @@
+# React App Tutorial
+Based on the "Expanding Your JS Skills with React" tutorial on A Cloud Guru.
+
+Link to tutorial: https://learn.acloud.guru/course/expanding-your-js-skills-with-react/dashboard
+
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
